@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0b1020">
+    <meta name="description" content="AppDost Careers – Join our team and internships.">
+    <link rel="icon" href="assets/img/favicon.svg" sizes="any" type="image/svg+xml">
+    <title>AppDost – Careers</title>
+    <link rel="preload" as="image" href="assets/img/favicon.svg">
+
+    <script src="js/theme.js"></script>
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/component.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/carrers.css">
+</head>
+<body>
+    <a class="skip btn btn--ghost" href="#main">Skip to content</a>
+
+    <div id="header-placeholder"></div>
+
+    <main id="main" tabindex="-1">
+        <section id="careers" class="section container">
+            <div class="careers-hero">
+                <div>
+                    <h2 class="section__title">Work With Us</h2>
+                    <p class="section__subtitle">We're building great products — join as an intern or as a full-time team member.</p>
+                    <p class="lede">We're looking for curious, collaborative people. Explore current openings below and apply — internships are paid and mentorship-led.</p>
+                </div>
+                <div class="careers-actions">
+                    <div class="search">
+                        <input id="job-search" type="search" placeholder="Search roles, skills or location" aria-label="Search jobs">
+                        <button id="clear-search" class="btn btn--ghost" aria-label="Clear search">Clear</button>
+                    </div>
+                    <div class="filters" role="tablist" aria-label="Job filters">
+                        <button class="filter active" data-filter="all" aria-pressed="true">All</button>
+                        <button class="filter" data-filter="internship" aria-pressed="false">Internships</button>
+                        <button class="filter" data-filter="fulltime" aria-pressed="false">Full time</button>
+                        <button class="filter" data-filter="remote" aria-pressed="false">Remote</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="jobs" id="jobs-list">
+                <article class="job" data-category="internship" aria-labelledby="job-frontend">
+                    <header class="job__head">
+                        <h3 id="job-frontend">Frontend Intern</h3>
+                        <div class="meta">3 months • Stipend • Onsite</div>
+                    </header>
+                    <p class="job__desc">Work on React components, UI performance and accessibility. Mentor-led with weekly feedback sessions.</p>
+                    <ul class="job__perks">
+                        <li>Mentorship</li>
+                        <li>Stipend</li>
+                        <li>Certificate</li>
+                    </ul>
+                    <a class="btn btn--primary" href="mailto:hr@appdost.com?subject=Application%3A%20Frontend%20Intern">Apply Now</a>
+                </article>
+
+                <article class="job" data-category="internship" aria-labelledby="job-backend">
+                    <header class="job__head">
+                        <h3 id="job-backend">Backend Intern</h3>
+                        <div class="meta">3 months • APIs • Database</div>
+                    </header>
+                    <p class="job__desc">Build and maintain scalable APIs, learn deployment workflows, and contribute to backend architecture decisions.</p>
+                    <ul class="job__perks">
+                        <li>Hands-on projects</li>
+                        <li>Mentor sessions</li>
+                    </ul>
+                    <a class="btn btn--primary" href="mailto:hr@appdost.com?subject=Application%3A%20Backend%20Intern">Apply Now</a>
+                </article>
+
+                <article class="job" data-category="internship" aria-labelledby="job-ux">
+                    <header class="job__head">
+                        <h3 id="job-ux">UI/UX Intern</h3>
+                        <div class="meta">Design systems • Prototyping</div>
+                    </header>
+                    <p class="job__desc">Support product teams with user research, wireframes and components for a consistent design system.</p>
+                    <ul class="job__perks">
+                        <li>Portfolio mentorship</li>
+                        <li>Design reviews</li>
+                    </ul>
+                    <a class="btn btn--primary" href="mailto:hr@appdost.com?subject=Application%3A%20UI%2FUX%20Intern">Apply Now</a>
+                </article>
+
+                <article class="job" data-category="fulltime remote" aria-labelledby="job-mobile">
+                    <header class="job__head">
+                        <h3 id="job-mobile">Mobile Engineer</h3>
+                        <div class="meta">Full time • Remote-friendly</div>
+                    </header>
+                    <p class="job__desc">Develop cross-platform mobile applications with a focus on performance and user experience.</p>
+                    <ul class="job__perks">
+                        <li>Remote-first</li>
+                        <li>Competitive salary</li>
+                    </ul>
+                    <a class="btn btn--primary" href="mailto:hr@appdost.com?subject=Application%3A%20Mobile%20Engineer">Apply Now</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="js/loadContent.js"></script>
+</body>
+</html>
