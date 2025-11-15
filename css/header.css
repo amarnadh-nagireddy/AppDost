@@ -26,7 +26,7 @@
 /* Nav container */
 .nav{
   display: flex;
-  align-items: center;
+  align-items: center;             /* ensure vertical centering */
   justify-content: space-between;
   gap: 1.5rem;
   padding: 0.75rem 2rem;
@@ -35,6 +35,7 @@
   width: 100%;
   flex-wrap: wrap;
   position: relative;
+  min-height: 64px;                /* stable header height to align items */
 }
 
 /* Brand */
@@ -46,7 +47,7 @@
   color:var(--text);
   transition: opacity .2s ease;
   flex-shrink:0;
-  margin-right:auto;
+  /* remove margin-right:auto so we can center nav and push actions explicitly */
   padding: .5rem 0;
 }
 .brand__logo{
@@ -73,7 +74,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  flex: 1 0 auto;
+  flex: 1 0 auto;                 /* allow menu to expand and center */
   justify-content: center;
   order: 2;
   min-width: 0;
@@ -252,6 +253,10 @@
 /* Hidden utility */
 .hidden { display: none !important; }
 
+/* Helper classes for showing/hiding mobile vs desktop actions */
+.mobile-only { display: flex; align-items: center; gap: .75rem; }
+.desktop-only { display: none; align-items: center; gap: .75rem; }
+
 /* ===== RESPONSIVE RULES (simplified) ===== */
 
 /* Desktop: 1200px and above - nav inline */
@@ -259,6 +264,7 @@
   .nav {
     padding: 0.75rem 2rem;
     gap: 1.5rem;
+    align-items: center;
   }
 
   .nav__menu {
@@ -267,6 +273,7 @@
     width: auto;
     height: auto;
     background: transparent;
+    
     transition: none;
     box-shadow: none;
     display: flex !important; /* inline desktop menu */
@@ -302,6 +309,10 @@
     font-size: 0.95rem;
     padding: 0.55rem 1rem;
   }
+
+  /* Desktop-only actions visible on desktop and pushed to far right */
+  .desktop-only { display: flex; margin-left: auto; order: 3; }
+  .mobile-only  { display: none !important; }
 }
 
 /* Mobile + Medium (below 1200px): use hamburger + slide-out panel */
@@ -310,6 +321,7 @@
     padding: 0.65rem 1rem;
     gap: 0.75rem;
     flex-wrap: nowrap;
+    align-items: center;
   }
 
   .brand { order: 1; margin-right: 0.5rem; gap: 0.75rem; }
@@ -375,8 +387,12 @@
     font-size: 0.95rem;
   }
 
-  .nav__actions { gap: 0.5rem; order: 4; }
+  /* mobile actions inside panel */
+  .nav__actions.mobile-only { gap: 0.5rem; order: 4; display: flex; margin-top: 1rem; }
   .nav__cta { font-size: 0.85rem; padding: 0.5rem 0.85rem; }
+
+  /* hide desktop-only on smaller screens */
+  .desktop-only { display: none !important; }
 }
 
 /* Keep the smaller tweaks for <600 and <400 (no color/font changes) */

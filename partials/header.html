@@ -25,8 +25,8 @@
       <a class="nav__link" data-page="careers.html" href="careers.html">Careers</a>
       <a class="nav__link" data-page="contact.html" href="contact.html">Contact</a>
 
-      <!-- Optional: include actions inside panel on small screens -->
-      <div class="nav__actions" style="margin-top:1rem;">
+      <!-- Mobile-only actions (inside panel) -->
+      <div class="nav__actions mobile-only" style="margin-top:1rem;">
         <div class="theme-toggle">
           <button class="btn btn--ghost theme-btn" id="theme-toggle" aria-label="Toggle theme">
             <svg class="theme-icon sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -50,9 +50,9 @@
       </div>
     </nav>
 
-    <!-- Right actions: Theme toggle and CTA (desktop visible) -->
-    <div class="nav__actions" aria-hidden="true">
-      <div class="theme-toggle desktop-only" style="display:flex;">
+    <!-- Right actions: Theme toggle and CTA (desktop only) -->
+    <div class="nav__actions desktop-only">
+      <div class="theme-toggle" aria-hidden="false">
         <button class="btn btn--ghost theme-btn desktop-style" id="theme-toggle-desktop" aria-label="Toggle theme">
           <svg class="theme-icon sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="4"></circle>
